@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super VIP Pra Preset</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #2b0000, #0a0000 70%);
+    color: white;
+}
+
+/* WATERMARK */
+body::before {
+    content: "PRA PRESET";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.04);
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* FOTO 1:1 */
+.product-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* Ini bikin 1:1 */
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+    animation: glow 3s infinite alternate;
+}
+
+.product-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Auto crop biar pas */
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px red; }
+    to { box-shadow: 0 0 50px crimson; }
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff2e2e;
+    text-shadow: 0 0 15px red;
+}
+
+/* CARD */
+.card {
+    background: rgba(255, 0, 0, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    margin-bottom: 30px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    text-align: center;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #ff0000;
+    text-shadow: 0 0 10px red;
+}
+
+.features {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ORDER BUTTON */
+.order-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(45deg, red, darkred);
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    box-shadow: 0 0 25px red;
+    transform: translateY(-4px);
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FOTO PRODUK 1:1 -->
+    <div class="product-wrapper">
+        <img src="https://files.catbox.moe/0o1hmt.jpg">
+    </div>
+
+    <div class="title">Alight Motion</div>
+
+    <div class="card">
+        <h2>ALIGHT MOTION PREMIUM 1 TAHUN</h2>
+        <div class="price">Rp 10.000</div>
+        <div class="features">
+            ✔ no iklan<br>
+            ✔ 5MB KATAS<br>
+            ✔ full garansi<br>
+            ✔ Free Update<br>
+            ✔ Support 24 Jam
+        </div>
+    </div>
+
+    <!-- GANTI NOMOR WA DI SINI -->
+    <a href="https://wa.me/6285166413821?text=Bang%20mau%20beli%20Alight%20Motion%20Premium%2010k%20satu%20tahun%20private" 
+    class="order-btn">
+        ORDER
+    </a>
+
+    <div class="footer">
+        © 2026 Pra Preset
+    </div>
+
+</div>
+
+</body>
+</html>
